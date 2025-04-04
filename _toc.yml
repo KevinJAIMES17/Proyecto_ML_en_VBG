@@ -14,5 +14,6 @@ chapters:
   - file: notebooks/EDA
     title: Exploración de Datos (EDA)
 
-  - file: notebooks/Modelos
-    title: Modelos de Clasificación
+  - file: notebooks/modelos
+    title: Modelos de Regresión
+
