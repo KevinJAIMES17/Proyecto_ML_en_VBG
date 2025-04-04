@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Imports - data &#8212; My sample book</title>
+    <title>Modelos &#8212; My sample book</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -182,10 +182,7 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="EDA.html">Exploración de Datos (EDA)</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Imports - data</a></li>
-
-
-
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Modelos de Regresión</a></li>
 </ul>
 
     </div>
@@ -371,7 +368,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Imports - data</h1>
+    <h1>Modelos</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -381,22 +378,21 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Imports - data</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#conversiones"><strong>Conversiones</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#seleccion-de-variables">Selección de variables</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#modelaje">Modelaje</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lineal-regression">Lineal Regression</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ridge">Ridge</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ridge-saga-solver">Ridge (Saga solver)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imports-data">Imports - data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conversiones"><strong>Conversiones</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#seleccion-de-variables">Selección de variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelaje">Modelaje</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lineal-regression">Lineal Regression</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ridge">Ridge</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ridge-saga-solver">Ridge (Saga solver)</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lasso"><strong>LASSO</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#knn"><strong>KNN</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#xgboost">Xgboost</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lasso"><strong>LASSO</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#knn"><strong>KNN</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#xgboost">Xgboost</a></li>
 </ul>
 </li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -407,8 +403,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="imports-data">
-<h1>Imports - data<a class="headerlink" href="#imports-data" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="modelos">
+<h1>Modelos<a class="headerlink" href="#modelos" title="Link to this heading">#</a></h1>
+<section id="imports-data">
+<h2>Imports - data<a class="headerlink" href="#imports-data" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
@@ -740,7 +738,7 @@ document.write(`
 </div>
 </section>
 <section id="conversiones">
-<h1><strong>Conversiones</strong><a class="headerlink" href="#conversiones" title="Link to this heading">#</a></h1>
+<h2><strong>Conversiones</strong><a class="headerlink" href="#conversiones" title="Link to this heading">#</a></h2>
 <p>Nos aseguramos del formato de las variables temporales (fechas) y sacamos información relevante sobre ellas, como lo es el día del año que representan.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -932,7 +930,7 @@ max         1.000000
 </div>
 </section>
 <section id="seleccion-de-variables">
-<h1>Selección de variables<a class="headerlink" href="#seleccion-de-variables" title="Link to this heading">#</a></h1>
+<h2>Selección de variables<a class="headerlink" href="#seleccion-de-variables" title="Link to this heading">#</a></h2>
 <p>En este espacio ya definimos nuestras variables númericas y categóricas que serán utilizadas en nuestros conjuntos de entrenamiento y de prueba para nuestos modelos.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -983,9 +981,9 @@ random_state=42 asegura que la división es reproducible, lo que significa que o
 </ul>
 </section>
 <section id="modelaje">
-<h1>Modelaje<a class="headerlink" href="#modelaje" title="Link to this heading">#</a></h1>
+<h2>Modelaje<a class="headerlink" href="#modelaje" title="Link to this heading">#</a></h2>
 <section id="lineal-regression">
-<h2>Lineal Regression<a class="headerlink" href="#lineal-regression" title="Link to this heading">#</a></h2>
+<h3>Lineal Regression<a class="headerlink" href="#lineal-regression" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="kn">import</span> <span class="n">stats</span>
@@ -1123,7 +1121,7 @@ Los residuos no siguen una distribución normal (rechazar H0).
 <p>Los resultados del modelo de regresión lineal para la predicción de “Diferenciadias” muestran un desempeño limitado en la tarea. El histograma de residuos sugiere que la mayoría de los errores están cerca de cero, pero con la presencia de valores atípicos que pueden estar afectando la precisión del modelo. La prueba de Ljung-Box indica que no hay una autocorrelación significativa en los residuos, lo cual es deseable, pero el test de Jarque-Bera rechaza la hipótesis de normalidad de los errores, sugiriendo que el modelo podría no estar capturando adecuadamente la estructura de la variable objetivo. En términos de desempeño, el coeficiente de determinación R² es de apenas 0.056, lo que indica que la regresión lineal explica muy poca variabilidad en los tiempos de consulta de las víctimas. Además, el scatter plot de valores reales vs. predichos evidencia que el modelo tiene problemas de ajuste, con predicciones negativas en algunos casos y una dispersión elevada, lo que sugiere que no logra capturar correctamente los patrones de la variable dependiente. Finalmente, las métricas de error (MAE: 23.30 y RMSE: 169.85) muestran que el modelo tiene una precisión moderada, pero podría beneficiarse de mejoras en la selección de variables o en la elección de una metodología más robusta para datos con alta variabilidad.</p>
 </section>
 <section id="ridge">
-<h2>Ridge<a class="headerlink" href="#ridge" title="Link to this heading">#</a></h2>
+<h3>Ridge<a class="headerlink" href="#ridge" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.linear_model</span><span class="w"> </span><span class="kn">import</span> <span class="n">Ridge</span>
@@ -1233,7 +1231,7 @@ R²: 0.056175165226262425
 </div>
 <p>Los resultados del modelo Ridge Regression muestran un rendimiento limitado en la predicción de la variable “Diferenciadias” dentro del conjunto de datos de violencia basada en género. El histograma de residuos revela una distribución altamente concentrada cerca de cero, pero con valores atípicos dispersos, lo que indica que el modelo tiene dificultades para ajustar correctamente la variabilidad de los datos. La prueba de Ljung-Box sugiere que los residuos no presentan autocorrelación significativa, lo que es favorable en términos de independencia temporal. Sin embargo, la métrica <span class="math notranslate nohighlight">\(R2=0.056R^2 = 0.056\)</span> indica que el modelo solo explica aproximadamente el <span class="math notranslate nohighlight">\(5.6\%\)</span> de la varianza de los datos, lo que es muy bajo. Además, el error cuadrático medio (RMSE) de 169.86 y el error absoluto medio (MAE) de 23.12 reflejan que las predicciones están lejos de ser precisas. En conjunto, estos resultados sugieren que Ridge Regression no captura adecuadamente las relaciones subyacentes en los datos, lo que podría deberse a una estructura de datos compleja o a la falta de características predictivas relevantes.</p>
 <section id="ridge-saga-solver">
-<h3>Ridge (Saga solver)<a class="headerlink" href="#ridge-saga-solver" title="Link to this heading">#</a></h3>
+<h4>Ridge (Saga solver)<a class="headerlink" href="#ridge-saga-solver" title="Link to this heading">#</a></h4>
 <p>Para el ridge con solver saga se utilizan los “mejores” hiperparámetros en la celda de código anterior y se hace lo mismo. En cuanto a los tiempos, se muestra una mayor ventana de tiempo en el entrenamiento del modelo de machine learning, sin embargo, se muestra una ligera disminución en los tiempos de entrenamiento para el modelo Ridge con solver saga.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1328,7 +1326,7 @@ R²: 0.05016380454931002
 </section>
 </section>
 <section id="lasso">
-<h2><strong>LASSO</strong><a class="headerlink" href="#lasso" title="Link to this heading">#</a></h2>
+<h3><strong>LASSO</strong><a class="headerlink" href="#lasso" title="Link to this heading">#</a></h3>
 <p>Volvemos a usar el mismo preprocessor de Ridge en Lasso, al igual que los hiper parametros del param_grid para su comparación en los modelos.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1432,7 +1430,7 @@ R²: 0.056075457160737585
 <p>El modelo de Lasso Regression aplicado a la predicción de “Diferenciadias” en casos de violencia basada en género muestra un rendimiento limitado, con un coeficiente de determinación ( R^2 ) de 0.056, lo que indica que solo una pequeña parte de la variabilidad de la variable objetivo se explica por el modelo. El error cuadrático medio (RMSE) de 169.87 sugiere una desviación considerable entre las predicciones y los valores reales. El gráfico de dispersión revela que las predicciones del modelo tienden a estar lejos de la línea ideal ( y = x ), indicando una subestimación sistemática para valores altos de “Diferenciadias”. El histograma de residuos muestra una distribución altamente sesgada, con la mayoría de los errores cercanos a cero pero algunos valores extremos, lo que puede reflejar problemas de ajuste. Además, la prueba de Ljung-Box y la autocorrelación de residuos no sugieren una dependencia temporal significativa en los errores, lo que implica que el modelo no capta correctamente posibles patrones temporales en los datos.</p>
 </section>
 <section id="knn">
-<h2><strong>KNN</strong><a class="headerlink" href="#knn" title="Link to this heading">#</a></h2>
+<h3><strong>KNN</strong><a class="headerlink" href="#knn" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.neighbors</span><span class="w"> </span><span class="kn">import</span> <span class="n">KNeighborsRegressor</span>
@@ -1759,7 +1757,7 @@ Los residuos no siguen una distribución normal (rechazar H0).
 <p>Los resultados del modelo Random Forest muestran limitaciones significativas en su desempeño para predecir la variable “Diferenciadias” en casos de violencia basada en género. El histograma de residuos indica una alta concentración de errores cerca de cero, pero con valores extremos dispersos, lo que sugiere problemas en la capacidad del modelo para generalizar correctamente. La autocorrelación de los residuos muestra independencia temporal, lo cual es positivo, pero la prueba de Jarque-Bera revela que los residuos no siguen una distribución normal, lo que puede afectar la robustez del modelo. El scatter plot de valores reales versus predichos evidencia una fuerte acumulación de predicciones en valores bajos y una dispersión amplia, lo que indica que el modelo no captura bien la variabilidad de la variable objetivo. Además, las métricas de desempeño refuerzan estas observaciones: el R² de 0.108 sugiere que el modelo apenas explica el 10.8% de la varianza de los datos, mientras que el RMSE de 165.13 indica errores elevados en la predicción. Estos resultados, junto con el MAE de 22.05, reflejan un desempeño pobre del modelo en la tarea de regresión.</p>
 </section>
 <section id="xgboost">
-<h2>Xgboost<a class="headerlink" href="#xgboost" title="Link to this heading">#</a></h2>
+<h3>Xgboost<a class="headerlink" href="#xgboost" title="Link to this heading">#</a></h3>
 <p>XGBoost (Extreme Gradient Boosting) es un algoritmo de aprendizaje automático basado en árboles de decisión que utiliza un enfoque de boosting para mejorar el rendimiento predictivo. Se destaca por su eficiencia computacional y capacidad para manejar datos con valores atípicos y relaciones no lineales. El código implementa un pipeline que incluye un preprocesador de variables categóricas mediante OneHotEncoder y un modelo XGBoost. Luego, se usa GridSearchCV con validación cruzada K-Fold para encontrar los mejores hiperparámetros, optimizando la profundidad del árbol (max_depth), la tasa de aprendizaje (learning_rate) y el número de árboles (n_estimators). Finalmente, el modelo seleccionado se entrena con los mejores parámetros y se evalúa mediante métricas como MAE, RMSE y R².</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2169,6 +2167,7 @@ MAPE: inf%
 </div>
 </section>
 </section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -2225,22 +2224,21 @@ MAPE: inf%
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Imports - data</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#conversiones"><strong>Conversiones</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#seleccion-de-variables">Selección de variables</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#modelaje">Modelaje</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lineal-regression">Lineal Regression</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ridge">Ridge</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ridge-saga-solver">Ridge (Saga solver)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imports-data">Imports - data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conversiones"><strong>Conversiones</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#seleccion-de-variables">Selección de variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelaje">Modelaje</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lineal-regression">Lineal Regression</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ridge">Ridge</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ridge-saga-solver">Ridge (Saga solver)</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lasso"><strong>LASSO</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#knn"><strong>KNN</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#xgboost">Xgboost</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lasso"><strong>LASSO</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#knn"><strong>KNN</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#xgboost">Xgboost</a></li>
 </ul>
 </li>
 </ul>
-
   </nav></div>
 
 </div></div>
