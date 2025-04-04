@@ -1,0 +1,18 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: markdown
+- file: notebooks
+- file: markdown-notebooks
+
+format: jb-book
+root: notebooks/intro.ipynb
+chapters:
+  - file: notebooks/EDA
+    title: Exploración de Datos (EDA)
+
+  - file: notebooks/Modelos
+    title: Modelos de Clasificación
