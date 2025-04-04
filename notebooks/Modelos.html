@@ -411,7 +411,7 @@ document.write(`
 <h1>Imports - data<a class="headerlink" href="#imports-data" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
@@ -427,22 +427,10 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;DATA.csv&#39;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;DATA.csv&#39;</span><span class="p">)</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -450,7 +438,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mun</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/content/DIVIPOLA-_C_digos_municipios.csv&#39;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mun</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/content/DIVIPOLA-_C_digos_municipios.csv&#39;</span><span class="p">)</span>
 <span class="n">mun</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -756,7 +744,7 @@ document.write(`
 <p>Nos aseguramos del formato de las variables temporales (fechas) y sacamos información relevante sobre ellas, como lo es el día del año que representan.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Convertir columnas de fecha a datetime</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Convertir columnas de fecha a datetime</span>
 <span class="n">fechas</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;FEC_NOT&quot;</span><span class="p">,</span> <span class="s2">&quot;FEC_CON&quot;</span><span class="p">,</span> <span class="s2">&quot;INI_SIN&quot;</span><span class="p">,</span> <span class="s2">&quot;FEC_HOS&quot;</span><span class="p">,</span> <span class="s2">&quot;FEC_DEF&quot;</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">fechas</span><span class="p">:</span>
     <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>  <span class="c1"># Convierte y maneja errores como NaT</span>
@@ -771,7 +759,7 @@ document.write(`
 <p>Enlistamos las variables binarias, pues, posteriormente se necesitará diferenciar de las númericas y categoricas, para un preprocesamiento adecuado a nuestros diferentes modelos.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Lista de variables binarias que tienen valores 1 y 2</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Lista de variables binarias que tienen valores 1 y 2</span>
 <span class="n">binarias_1_2</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;GP_DISCAPA&quot;</span><span class="p">,</span> <span class="s2">&quot;GP_DESPLAZ&quot;</span><span class="p">,</span> <span class="s2">&quot;GP_MIGRANT&quot;</span><span class="p">,</span> <span class="s2">&quot;GP_CARCELA&quot;</span><span class="p">,</span>
                  <span class="s2">&quot;GP_GESTAN&quot;</span><span class="p">,</span> <span class="s2">&quot;GP_INDIGEN&quot;</span><span class="p">,</span> <span class="s2">&quot;GP_POBICFB&quot;</span><span class="p">,</span> <span class="s2">&quot;GP_MAD_COM&quot;</span><span class="p">,</span>
                  <span class="s2">&quot;GP_DESMOVI&quot;</span><span class="p">,</span> <span class="s2">&quot;GP_PSIQUIA&quot;</span><span class="p">,</span> <span class="s2">&quot;GP_VIC_VIO&quot;</span><span class="p">,</span> <span class="s2">&quot;GP_OTROS&quot;</span><span class="p">,</span> <span class="s2">&quot;CON_FIN&quot;</span><span class="p">]</span>
@@ -781,7 +769,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Convertir 1 → 0 y 2 → 1</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Convertir 1 → 0 y 2 → 1</span>
 <span class="n">df</span><span class="p">[</span><span class="n">binarias_1_2</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">binarias_1_2</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span>
 
 <span class="c1"># Verificar que el cambio fue exitoso</span>
@@ -836,7 +824,7 @@ max         1.000000
 <p>Estamos buscando hacer un merge con el dataset mun, para esto, primero nos aseguramos de que los códigos de municipio de este dataset mun sean enteros de 5 cifras, que no contengan espacio. Por otro lado, nos vamos modificando nuestro código de municipio en nuestro dataset, pues, este se encontraba separado entre COD_DPTO_ y COD_MUN_, para esto nos aseguramos de que estas variables tengan 2 y 3 cifras respectivamente, para posteriormente concatenar y tener nuestros códigos de municipios listos.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mun</span><span class="p">[</span><span class="s1">&#39;Código Municipio&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mun</span><span class="p">[</span><span class="s1">&#39;Código Municipio&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mun</span><span class="p">[</span><span class="s1">&#39;Código Municipio&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mun</span><span class="p">[</span><span class="s1">&#39;Código Municipio&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">mun</span><span class="p">[</span><span class="s2">&quot;Código Municipio&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mun</span><span class="p">[</span><span class="s2">&quot;Código Municipio&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
 
 <span class="n">mun</span><span class="p">[</span><span class="s1">&#39;Latitud&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mun</span><span class="p">[</span><span class="s1">&#39;Latitud&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
@@ -877,7 +865,7 @@ max         1.000000
 <p>Para aprovehar al máximo nuestras variables de locación, hemos tenido en cuenta las distancias entre municipios de ocurrencia, residencia y notificación. Para poder llegar a estos acercamientos, nos valemos de geodesic, usándola en la función calcular_distancia, en donde después de unir las bases de datos mediante las variables de COD_MUN_ y asignadas las coordenadas de cada municipio, utilizaba geodesic para calcular esta distancia en kilometros.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">geopy.distance</span><span class="w"> </span><span class="kn">import</span> <span class="n">geodesic</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">geopy.distance</span><span class="w"> </span><span class="kn">import</span> <span class="n">geodesic</span>
 
 
 <span class="c1"># Unir df con mun para obtener coordenadas del municipio de ocurrencia (O)</span>
@@ -932,6 +920,12 @@ max         1.000000
 <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;coord_O_lat&#39;</span><span class="p">,</span> <span class="s1">&#39;coord_O_lon&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;coord_O&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">)</span>
 <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;coord_R_lat&#39;</span><span class="p">,</span> <span class="s1">&#39;coord_R_lon&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;coord_R&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">)</span>
 <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;coord_N_lat&#39;</span><span class="p">,</span> <span class="s1">&#39;coord_N_lon&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;coord_N&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">)</span>
+
+
+
+
+
+
 </pre></div>
 </div>
 </div>
@@ -942,7 +936,7 @@ max         1.000000
 <p>En este espacio ya definimos nuestras variables númericas y categóricas que serán utilizadas en nuestros conjuntos de entrenamiento y de prueba para nuestos modelos.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">variables_numericas</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;coord_O_lat&#39;</span><span class="p">,</span> <span class="s1">&#39;coord_O_lon&#39;</span><span class="p">,</span> <span class="s1">&#39;coord_R_lat&#39;</span><span class="p">,</span> <span class="s1">&#39;coord_R_lon&#39;</span><span class="p">,</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">variables_numericas</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;coord_O_lat&#39;</span><span class="p">,</span> <span class="s1">&#39;coord_O_lon&#39;</span><span class="p">,</span> <span class="s1">&#39;coord_R_lat&#39;</span><span class="p">,</span> <span class="s1">&#39;coord_R_lon&#39;</span><span class="p">,</span>
                        <span class="s1">&#39;coord_N_lat&#39;</span><span class="p">,</span> <span class="s1">&#39;coord_N_lon&#39;</span><span class="p">,</span> <span class="s2">&quot;distancia_O_N&quot;</span><span class="p">,</span><span class="s2">&quot;distancia_R_O&quot;</span><span class="p">,</span>
                        <span class="s2">&quot;distancia_R_N&quot;</span><span class="p">,</span> <span class="s2">&quot;INI_SIN_dia_ano&quot;</span><span class="p">,</span> <span class="s2">&quot;FEC_NOT_dia_ano&quot;</span><span class="p">,</span> <span class="s2">&quot;FEC_CON_dia_ano&quot;</span><span class="p">,</span>
                        <span class="s2">&quot;FEC_HOS_dia_ano&quot;</span><span class="p">,</span> <span class="s2">&quot;FEC_DEF_dia_ano&quot;</span><span class="p">,</span> <span class="s1">&#39;SEMANA&#39;</span><span class="p">,</span> <span class="s1">&#39;ANO&#39;</span><span class="p">,</span> <span class="s1">&#39;EDAD&#39;</span><span class="p">,</span> <span class="s2">&quot;sem_ges&quot;</span><span class="p">]</span>
@@ -963,7 +957,7 @@ import pandas as pd: Importa la librería pandas, ampliamente utilizada para la 
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.pipeline</span><span class="w"> </span><span class="kn">import</span> <span class="n">Pipeline</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.pipeline</span><span class="w"> </span><span class="kn">import</span> <span class="n">Pipeline</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.compose</span><span class="w"> </span><span class="kn">import</span> <span class="n">ColumnTransformer</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">OneHotEncoder</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.linear_model</span><span class="w"> </span><span class="kn">import</span> <span class="n">LinearRegression</span>
@@ -994,7 +988,7 @@ random_state=42 asegura que la división es reproducible, lo que significa que o
 <h2>Lineal Regression<a class="headerlink" href="#lineal-regression" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="kn">import</span> <span class="n">stats</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="kn">import</span> <span class="n">stats</span>
 </pre></div>
 </div>
 </div>
@@ -1002,7 +996,7 @@ random_state=42 asegura que la división es reproducible, lo que significa que o
 <p>Declaramos el preprocesador que contiene el OneHotEncoder, que será utilizado para las variables categóricas en el pipeline que se define después en donde también se encuentra el modelo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Preprocesador: MinMaxScaler para numéricas y OneHotEncoder para categóricas</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Preprocesador: MinMaxScaler para numéricas y OneHotEncoder para categóricas</span>
 <span class="n">preprocessor</span> <span class="o">=</span> <span class="n">ColumnTransformer</span><span class="p">([</span>
    <span class="p">(</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">handle_unknown</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">),</span> <span class="n">variables_categoricas</span><span class="p">)</span>  <span class="c1"># Codificar categóricas</span>
 <span class="p">],</span> <span class="n">remainder</span><span class="o">=</span><span class="s1">&#39;passthrough&#39;</span><span class="p">)</span>  <span class="c1"># Dejar las numéricas sin cambios</span>
@@ -1018,7 +1012,7 @@ n_jobs=-1 utiliza todos los núcleos de procesador disponibles para un cálculo 
 grid_search.fit entrena el modelo utilizando la canalización, la cuadrícula de hiperparámetros y la estrategia de validación cruzada especificadas en los datos de entrenamiento (X_train, y_train).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Crear pipeline con preprocesamiento y modelo</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Crear pipeline con preprocesamiento y modelo</span>
 <span class="n">pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
     <span class="p">(</span><span class="s1">&#39;preprocessor&#39;</span><span class="p">,</span> <span class="n">preprocessor</span><span class="p">),</span>
     <span class="p">(</span><span class="s1">&#39;model&#39;</span><span class="p">,</span> <span class="n">LinearRegression</span><span class="p">())</span>  <span class="c1"># Modelo Lineal</span>
@@ -1132,7 +1126,7 @@ Los residuos no siguen una distribución normal (rechazar H0).
 <h2>Ridge<a class="headerlink" href="#ridge" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.linear_model</span><span class="w"> </span><span class="kn">import</span> <span class="n">Ridge</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.linear_model</span><span class="w"> </span><span class="kn">import</span> <span class="n">Ridge</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">mean_absolute_error</span><span class="p">,</span> <span class="n">mean_squared_error</span><span class="p">,</span> <span class="n">r2_score</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">statsmodels.graphics.tsaplots</span><span class="w"> </span><span class="kn">import</span> <span class="n">plot_acf</span>
 </pre></div>
@@ -1142,7 +1136,7 @@ Los residuos no siguen una distribución normal (rechazar H0).
 <p>Para Ridge es prácticamente el mismo código, solo añadimos RobustScaler() para las variables númericas en el Preprocessor. Esto para que la penalizacion afecte a todas las variables númericas por igual. También se añade el hiperparámetro alpha a param_grid para verificar cual es mejor ajuste de regularizacion según la métrica <span class="math notranslate nohighlight">\(R^2\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Preprocesador: MinMaxScaler para numéricas y OneHotEncoder para categóricas</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Preprocesador: MinMaxScaler para numéricas y OneHotEncoder para categóricas</span>
 <span class="n">preprocessor</span> <span class="o">=</span> <span class="n">ColumnTransformer</span><span class="p">([</span>
    <span class="p">(</span><span class="s1">&#39;num&#39;</span><span class="p">,</span> <span class="n">RobustScaler</span><span class="p">(),</span> <span class="n">variables_numericas</span><span class="p">),</span>
    <span class="p">(</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">handle_unknown</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">),</span> <span class="n">variables_categoricas</span><span class="p">)</span>  <span class="c1"># Codificar categóricas</span>
@@ -1153,7 +1147,7 @@ Los residuos no siguen una distribución normal (rechazar H0).
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Crear pipeline con preprocesamiento y modelo</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Crear pipeline con preprocesamiento y modelo</span>
 <span class="n">pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
     <span class="p">(</span><span class="s1">&#39;preprocessor&#39;</span><span class="p">,</span> <span class="n">preprocessor</span><span class="p">),</span>
     <span class="p">(</span><span class="s1">&#39;model&#39;</span><span class="p">,</span> <span class="n">Ridge</span><span class="p">())</span>  <span class="c1"># Modelo Ridge</span>
@@ -1243,7 +1237,7 @@ R²: 0.056175165226262425
 <p>Para el ridge con solver saga se utilizan los “mejores” hiperparámetros en la celda de código anterior y se hace lo mismo. En cuanto a los tiempos, se muestra una mayor ventana de tiempo en el entrenamiento del modelo de machine learning, sin embargo, se muestra una ligera disminución en los tiempos de entrenamiento para el modelo Ridge con solver saga.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Crear pipeline con preprocesamiento y modelo</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Crear pipeline con preprocesamiento y modelo</span>
 <span class="n">pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
     <span class="p">(</span><span class="s1">&#39;preprocessor&#39;</span><span class="p">,</span> <span class="n">preprocessor</span><span class="p">),</span>
     <span class="p">(</span><span class="s1">&#39;model&#39;</span><span class="p">,</span> <span class="n">Ridge</span><span class="p">(</span><span class="n">solver</span><span class="o">=</span><span class="s1">&#39;saga&#39;</span><span class="p">))</span>  <span class="c1"># Modelo Ridge</span>
@@ -1338,7 +1332,7 @@ R²: 0.05016380454931002
 <p>Volvemos a usar el mismo preprocessor de Ridge en Lasso, al igual que los hiper parametros del param_grid para su comparación en los modelos.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.linear_model</span><span class="w"> </span><span class="kn">import</span> <span class="n">Lasso</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.linear_model</span><span class="w"> </span><span class="kn">import</span> <span class="n">Lasso</span>
 
 <span class="c1"># Crear pipeline con preprocesamiento y modelo Lasso</span>
 <span class="n">pipeline_lasso</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
@@ -1441,7 +1435,7 @@ R²: 0.056075457160737585
 <h2><strong>KNN</strong><a class="headerlink" href="#knn" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.neighbors</span><span class="w"> </span><span class="kn">import</span> <span class="n">KNeighborsRegressor</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.neighbors</span><span class="w"> </span><span class="kn">import</span> <span class="n">KNeighborsRegressor</span>
 </pre></div>
 </div>
 </div>
@@ -1449,7 +1443,7 @@ R²: 0.056075457160737585
 <p>Para el preprocessor esta vez se cambiado el scaler por MinMaxScaler con feature_range=(0, 1) para las variables númericas, teniendo como objetivo normalizar nuestros datos entre 0 y 1.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Preprocesador: MinMaxScaler para numéricas y OneHotEncoder para categóricas</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Preprocesador: MinMaxScaler para numéricas y OneHotEncoder para categóricas</span>
 <span class="n">preprocessor</span> <span class="o">=</span> <span class="n">ColumnTransformer</span><span class="p">([</span>
    <span class="p">(</span><span class="s1">&#39;num&#39;</span><span class="p">,</span> <span class="n">MinMaxScaler</span><span class="p">(</span><span class="n">feature_range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span> <span class="n">variables_numericas</span><span class="p">),</span>
    <span class="p">(</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">handle_unknown</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">),</span> <span class="n">variables_categoricas</span><span class="p">)</span>  <span class="c1"># Codificar categóricas</span>
@@ -1460,7 +1454,7 @@ R²: 0.056075457160737585
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definir el modelo KNN</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definir el modelo KNN</span>
 <span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsRegressor</span><span class="p">()</span>
 
 <span class="c1"># Crear pipeline con preprocesamiento y modelo</span>
@@ -1529,7 +1523,7 @@ R²: 0.7253904086815575
 <p>####KNN Ball Trees</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsRegressor</span><span class="p">(</span><span class="n">algorithm</span><span class="o">=</span><span class="s1">&#39;ball_tree&#39;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsRegressor</span><span class="p">(</span><span class="n">algorithm</span><span class="o">=</span><span class="s1">&#39;ball_tree&#39;</span><span class="p">)</span>
 <span class="c1"># Crear pipeline con preprocesamiento y modelo</span>
 <span class="n">pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
     <span class="p">(</span><span class="s1">&#39;preprocessor&#39;</span><span class="p">,</span> <span class="n">preprocessor</span><span class="p">),</span>
@@ -1620,7 +1614,7 @@ R²: -0.2515309591953796
 <p>Random Forest es un modelo de ensamble basado en múltiples árboles de decisión, donde cada árbol se entrena con una muestra aleatoria del conjunto de datos y realiza predicciones independientes que luego se promedian para mejorar la precisión y reducir el sobreajuste. En el código, se implementa un pipeline con un preprocesador para variables categóricas y un modelo de RandomForestRegressor. Se utiliza GridSearchCV con validación cruzada para optimizar hiperparámetros clave como el número de árboles (n_estimators), la profundidad máxima (max_depth) y la cantidad de características consideradas en cada división (max_features). Una vez encontrado el mejor modelo, se entrena y se evalúa con métricas como MAE, RMSE y R². En el contexto de la predicción de “Diferenciadias”, Random Forest puede ser útil al capturar relaciones no lineales y reducir la varianza del modelo. Sin embargo, su rendimiento puede verse afectado si la variable objetivo presenta una gran dispersión o valores extremos, lo que sugiere la necesidad de ajustar los hiperparámetros o probar modelos complementarios para mejorar la precisión.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">preprocessor</span> <span class="o">=</span> <span class="n">ColumnTransformer</span><span class="p">([</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">preprocessor</span> <span class="o">=</span> <span class="n">ColumnTransformer</span><span class="p">([</span>
     <span class="p">(</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">handle_unknown</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">),</span> <span class="n">variables_categoricas</span><span class="p">)</span>  <span class="c1"># Codificar categóricas</span>
 <span class="p">],</span> <span class="n">remainder</span><span class="o">=</span><span class="s1">&#39;passthrough&#39;</span><span class="p">)</span>  <span class="c1"># Dejar las numéricas sin cambios</span>
 </pre></div>
@@ -1629,7 +1623,7 @@ R²: -0.2515309591953796
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.ensemble</span><span class="w"> </span><span class="kn">import</span> <span class="n">RandomForestRegressor</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.ensemble</span><span class="w"> </span><span class="kn">import</span> <span class="n">RandomForestRegressor</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">GridSearchCV</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="n">log2</span>
 
@@ -1691,7 +1685,7 @@ R²: 0.10807137835137848
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">statsmodels.api</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sm</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">statsmodels.graphics.tsaplots</span><span class="w"> </span><span class="kn">import</span> <span class="n">plot_acf</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="kn">import</span> <span class="n">stats</span>
@@ -1769,7 +1763,7 @@ Los residuos no siguen una distribución normal (rechazar H0).
 <p>XGBoost (Extreme Gradient Boosting) es un algoritmo de aprendizaje automático basado en árboles de decisión que utiliza un enfoque de boosting para mejorar el rendimiento predictivo. Se destaca por su eficiencia computacional y capacidad para manejar datos con valores atípicos y relaciones no lineales. El código implementa un pipeline que incluye un preprocesador de variables categóricas mediante OneHotEncoder y un modelo XGBoost. Luego, se usa GridSearchCV con validación cruzada K-Fold para encontrar los mejores hiperparámetros, optimizando la profundidad del árbol (max_depth), la tasa de aprendizaje (learning_rate) y el número de árboles (n_estimators). Finalmente, el modelo seleccionado se entrena con los mejores parámetros y se evalúa mediante métricas como MAE, RMSE y R².</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">preprocessor</span> <span class="o">=</span> <span class="n">ColumnTransformer</span><span class="p">([</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">preprocessor</span> <span class="o">=</span> <span class="n">ColumnTransformer</span><span class="p">([</span>
     <span class="p">(</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">handle_unknown</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">),</span> <span class="n">variables_categoricas</span><span class="p">)</span>  <span class="c1"># Codificar categóricas</span>
 <span class="p">],</span> <span class="n">remainder</span><span class="o">=</span><span class="s1">&#39;passthrough&#39;</span><span class="p">)</span>  <span class="c1"># Dejar las numéricas sin cambios</span>
 </pre></div>
@@ -1778,7 +1772,7 @@ Los residuos no siguen una distribución normal (rechazar H0).
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">xgboost</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xgb</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">xgboost</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xgb</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">KFold</span>
 
 
@@ -1867,7 +1861,8 @@ MAPE: inf%
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># --------------------- Análisis de residuos ---------------------</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="c1"># --------------------- Análisis de residuos ---------------------</span>
 <span class="n">residuos_x</span> <span class="o">=</span> <span class="n">y_test</span> <span class="o">-</span> <span class="n">y_pred_x</span>
 
 <span class="c1"># Histograma de los residuos</span>
@@ -1920,7 +1915,7 @@ MAPE: inf%
 <p>XGBoost es un algoritmo de boosting basado en árboles de decisión, optimizado para eficiencia y precisión en tareas de regresión. La configuración utilizada, objective=’reg:squarederror’, minimiza el error cuadrático, mientras que tree_method=’hist’ acelera el entrenamiento en grandes volúmenes de datos. Además, eval_metric=’rmse’ prioriza la reducción del error medio cuadrático, y early_stopping_rounds=40 detiene el entrenamiento si no hay mejora tras 40 iteraciones, evitando el sobreajuste. En la predicción de “Diferenciadias”, esta configuración permite capturar relaciones complejas y mejorar la generalización del modelo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">xgboost</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xgb</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">xgboost</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xgb</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">KFold</span>
 
 
@@ -2025,7 +2020,8 @@ MAPE: inf%
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># --------------------- Análisis de residuos ---------------------</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="c1"># --------------------- Análisis de residuos ---------------------</span>
 <span class="n">residuos_xgb</span> <span class="o">=</span> <span class="n">y_test</span> <span class="o">-</span> <span class="n">y_pred</span>
 
 <span class="c1"># Histograma de los residuos</span>
@@ -2056,6 +2052,7 @@ MAPE: inf%
 <span class="n">plt</span><span class="o">.</span><span class="n">axline</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">slope</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;dashed&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Línea ideal (y=x)&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
 </pre></div>
 </div>
 </div>
@@ -2077,7 +2074,7 @@ MAPE: inf%
 <p>El modelo <strong>Support Vector Regression (SVR)</strong> es una técnica basada en máquinas de soporte vectorial que busca encontrar una función que prediga la variable objetivo dentro de un margen de tolerancia determinado, minimizando la complejidad del modelo y los errores fuera de este margen. A diferencia de los modelos tradicionales de regresión, SVR es robusto ante valores atípicos y puede capturar relaciones complejas mediante el uso de funciones kernel, como el radial basis function (RBF). En el contexto de la predicción de <strong>“Diferenciadias”</strong>, SVR puede ser una herramienta poderosa, ya que permite modelar patrones no lineales en los tiempos de consulta de las víctimas en función de variables espaciales y temporales. Su capacidad para manejar datos ruidosos y evitar el sobreajuste lo convierte en una alternativa interesante para mejorar la precisión de las estimaciones y entender mejor los factores que influyen en los tiempos de respuesta ante casos de violencia basada en género.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.svm</span><span class="w"> </span><span class="kn">import</span> <span class="n">SVR</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.svm</span><span class="w"> </span><span class="kn">import</span> <span class="n">SVR</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">jarque_bera</span>
 
 <span class="c1"># Crear pipeline con SVR</span>
