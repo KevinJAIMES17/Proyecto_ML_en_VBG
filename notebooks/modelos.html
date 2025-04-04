@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -382,14 +382,22 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conversiones"><strong>Conversiones</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#seleccion-de-variables">Selección de variables</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelaje">Modelaje</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lineal-regression">Lineal Regression</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ridge">Ridge</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lineal-regression"><strong>Lineal Regression</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ridge"><strong>Ridge</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ridge-saga-solver">Ridge (Saga solver)</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lasso"><strong>LASSO</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#knn"><strong>KNN</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#xgboost">Xgboost</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#knn"><strong>KNN</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#knn-ball-trees">KNN Ball Trees</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#random-forest"><strong>Random Forest</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#xgboost"><strong>Xgboost</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#xgboost-optimizado">Xgboost (Optimizado)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#svr"><strong>SVR</strong></a></li>
 </ul>
 </li>
 </ul>
@@ -983,7 +991,7 @@ random_state=42 asegura que la división es reproducible, lo que significa que o
 <section id="modelaje">
 <h2>Modelaje<a class="headerlink" href="#modelaje" title="Link to this heading">#</a></h2>
 <section id="lineal-regression">
-<h3>Lineal Regression<a class="headerlink" href="#lineal-regression" title="Link to this heading">#</a></h3>
+<h3><strong>Lineal Regression</strong><a class="headerlink" href="#lineal-regression" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="kn">import</span> <span class="n">stats</span>
@@ -1121,7 +1129,7 @@ Los residuos no siguen una distribución normal (rechazar H0).
 <p>Los resultados del modelo de regresión lineal para la predicción de “Diferenciadias” muestran un desempeño limitado en la tarea. El histograma de residuos sugiere que la mayoría de los errores están cerca de cero, pero con la presencia de valores atípicos que pueden estar afectando la precisión del modelo. La prueba de Ljung-Box indica que no hay una autocorrelación significativa en los residuos, lo cual es deseable, pero el test de Jarque-Bera rechaza la hipótesis de normalidad de los errores, sugiriendo que el modelo podría no estar capturando adecuadamente la estructura de la variable objetivo. En términos de desempeño, el coeficiente de determinación R² es de apenas 0.056, lo que indica que la regresión lineal explica muy poca variabilidad en los tiempos de consulta de las víctimas. Además, el scatter plot de valores reales vs. predichos evidencia que el modelo tiene problemas de ajuste, con predicciones negativas en algunos casos y una dispersión elevada, lo que sugiere que no logra capturar correctamente los patrones de la variable dependiente. Finalmente, las métricas de error (MAE: 23.30 y RMSE: 169.85) muestran que el modelo tiene una precisión moderada, pero podría beneficiarse de mejoras en la selección de variables o en la elección de una metodología más robusta para datos con alta variabilidad.</p>
 </section>
 <section id="ridge">
-<h3>Ridge<a class="headerlink" href="#ridge" title="Link to this heading">#</a></h3>
+<h3><strong>Ridge</strong><a class="headerlink" href="#ridge" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.linear_model</span><span class="w"> </span><span class="kn">import</span> <span class="n">Ridge</span>
@@ -1518,7 +1526,8 @@ R²: 0.7253904086815575
 </div>
 </div>
 <p>El modelo de K-Nearest Neighbors (KNN) ha mostrado un desempeño notablemente mejor en la predicción de la variable “Diferenciadias” en comparación con otros modelos evaluados. Con un valor óptimo de <span class="math notranslate nohighlight">\(K = 2\)</span>, el modelo logra un coeficiente de determinación <span class="math notranslate nohighlight">\(R^2\)</span> de 0.725, lo que indica que explica una gran parte de la variabilidad en los tiempos de consulta de las víctimas. Además, las métricas de error muestran valores bajos: un MAE de apenas 0.00088 y un RMSE de 0.0114, lo que sugiere que las predicciones son muy precisas. Sin embargo, el tiempo de predicción es considerablemente alto (24.53 segundos), lo que podría ser una limitación en aplicaciones de producción con grandes volúmenes de datos. Estos resultados sugieren que KNN capta patrones importantes en la relación entre las variables predictoras y el tiempo de consulta, aunque su eficiencia computacional debe considerarse al momento de implementarlo en entornos reales.</p>
-<p>####KNN Ball Trees</p>
+<section id="knn-ball-trees">
+<h4>KNN Ball Trees<a class="headerlink" href="#knn-ball-trees" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsRegressor</span><span class="p">(</span><span class="n">algorithm</span><span class="o">=</span><span class="s1">&#39;ball_tree&#39;</span><span class="p">)</span>
@@ -1608,7 +1617,10 @@ R²: -0.2515309591953796
 </div>
 </div>
 </div>
-<p>###<strong>Random Forest</strong></p>
+</section>
+</section>
+<section id="random-forest">
+<h3><strong>Random Forest</strong><a class="headerlink" href="#random-forest" title="Link to this heading">#</a></h3>
 <p>Random Forest es un modelo de ensamble basado en múltiples árboles de decisión, donde cada árbol se entrena con una muestra aleatoria del conjunto de datos y realiza predicciones independientes que luego se promedian para mejorar la precisión y reducir el sobreajuste. En el código, se implementa un pipeline con un preprocesador para variables categóricas y un modelo de RandomForestRegressor. Se utiliza GridSearchCV con validación cruzada para optimizar hiperparámetros clave como el número de árboles (n_estimators), la profundidad máxima (max_depth) y la cantidad de características consideradas en cada división (max_features). Una vez encontrado el mejor modelo, se entrena y se evalúa con métricas como MAE, RMSE y R². En el contexto de la predicción de “Diferenciadias”, Random Forest puede ser útil al capturar relaciones no lineales y reducir la varianza del modelo. Sin embargo, su rendimiento puede verse afectado si la variable objetivo presenta una gran dispersión o valores extremos, lo que sugiere la necesidad de ajustar los hiperparámetros o probar modelos complementarios para mejorar la precisión.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1757,7 +1769,7 @@ Los residuos no siguen una distribución normal (rechazar H0).
 <p>Los resultados del modelo Random Forest muestran limitaciones significativas en su desempeño para predecir la variable “Diferenciadias” en casos de violencia basada en género. El histograma de residuos indica una alta concentración de errores cerca de cero, pero con valores extremos dispersos, lo que sugiere problemas en la capacidad del modelo para generalizar correctamente. La autocorrelación de los residuos muestra independencia temporal, lo cual es positivo, pero la prueba de Jarque-Bera revela que los residuos no siguen una distribución normal, lo que puede afectar la robustez del modelo. El scatter plot de valores reales versus predichos evidencia una fuerte acumulación de predicciones en valores bajos y una dispersión amplia, lo que indica que el modelo no captura bien la variabilidad de la variable objetivo. Además, las métricas de desempeño refuerzan estas observaciones: el R² de 0.108 sugiere que el modelo apenas explica el 10.8% de la varianza de los datos, mientras que el RMSE de 165.13 indica errores elevados en la predicción. Estos resultados, junto con el MAE de 22.05, reflejan un desempeño pobre del modelo en la tarea de regresión.</p>
 </section>
 <section id="xgboost">
-<h3>Xgboost<a class="headerlink" href="#xgboost" title="Link to this heading">#</a></h3>
+<h3><strong>Xgboost</strong><a class="headerlink" href="#xgboost" title="Link to this heading">#</a></h3>
 <p>XGBoost (Extreme Gradient Boosting) es un algoritmo de aprendizaje automático basado en árboles de decisión que utiliza un enfoque de boosting para mejorar el rendimiento predictivo. Se destaca por su eficiencia computacional y capacidad para manejar datos con valores atípicos y relaciones no lineales. El código implementa un pipeline que incluye un preprocesador de variables categóricas mediante OneHotEncoder y un modelo XGBoost. Luego, se usa GridSearchCV con validación cruzada K-Fold para encontrar los mejores hiperparámetros, optimizando la profundidad del árbol (max_depth), la tasa de aprendizaje (learning_rate) y el número de árboles (n_estimators). Finalmente, el modelo seleccionado se entrena con los mejores parámetros y se evalúa mediante métricas como MAE, RMSE y R².</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1909,7 +1921,8 @@ MAPE: inf%
 </div>
 </div>
 <p>Los resultados obtenidos del modelo XGBoost para predecir el tiempo entre la ocurrencia y la consulta de la víctima de violencia basada en género (“Diferenciadias”) muestran un desempeño limitado. El histograma de residuos indica que la mayoría de los errores se concentran en torno a cero, pero con algunos valores atípicos significativos. La prueba de Ljung-Box sugiere que no hay una autocorrelación significativa en los residuos, lo que es positivo en términos de independencia del error. Sin embargo, la baja métrica R² (0.091) indica que el modelo apenas captura la variabilidad de la variable objetivo, lo que sugiere que factores clave pueden estar ausentes en la modelización o que la variable es altamente impredecible. Además, el diagrama de dispersión entre valores reales y predichos muestra una tendencia a subestimar valores altos, lo que podría afectar la utilidad del modelo en casos críticos donde las diferencias de días son largas. El MAE de 20.15 y el RMSE de 166.70 refuerzan la idea de un ajuste insuficiente, y la MAPE reporta un valor infinito, posiblemente debido a valores reales cercanos a cero. Esto resalta la complejidad del problema y la necesidad de explorar características adicionales o ajustes en la arquitectura del modelo.</p>
-<p>###Xgboost (Optimizado)</p>
+<section id="xgboost-optimizado">
+<h4>Xgboost (Optimizado)<a class="headerlink" href="#xgboost-optimizado" title="Link to this heading">#</a></h4>
 <p>XGBoost es un algoritmo de boosting basado en árboles de decisión, optimizado para eficiencia y precisión en tareas de regresión. La configuración utilizada, objective=’reg:squarederror’, minimiza el error cuadrático, mientras que tree_method=’hist’ acelera el entrenamiento en grandes volúmenes de datos. Además, eval_metric=’rmse’ prioriza la reducción del error medio cuadrático, y early_stopping_rounds=40 detiene el entrenamiento si no hay mejora tras 40 iteraciones, evitando el sobreajuste. En la predicción de “Diferenciadias”, esta configuración permite capturar relaciones complejas y mejorar la generalización del modelo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2068,7 +2081,10 @@ MAPE: inf%
 <img alt="../_images/6275fb73511ebe625f4f08343c2692c72df86da1d34b745513cecfb42b23cd52.png" src="../_images/6275fb73511ebe625f4f08343c2692c72df86da1d34b745513cecfb42b23cd52.png" />
 </div>
 </div>
-<p>###SVR</p>
+</section>
+</section>
+<section id="svr">
+<h3><strong>SVR</strong><a class="headerlink" href="#svr" title="Link to this heading">#</a></h3>
 <p>El modelo <strong>Support Vector Regression (SVR)</strong> es una técnica basada en máquinas de soporte vectorial que busca encontrar una función que prediga la variable objetivo dentro de un margen de tolerancia determinado, minimizando la complejidad del modelo y los errores fuera de este margen. A diferencia de los modelos tradicionales de regresión, SVR es robusto ante valores atípicos y puede capturar relaciones complejas mediante el uso de funciones kernel, como el radial basis function (RBF). En el contexto de la predicción de <strong>“Diferenciadias”</strong>, SVR puede ser una herramienta poderosa, ya que permite modelar patrones no lineales en los tiempos de consulta de las víctimas en función de variables espaciales y temporales. Su capacidad para manejar datos ruidosos y evitar el sobreajuste lo convierte en una alternativa interesante para mejorar la precisión de las estimaciones y entender mejor los factores que influyen en los tiempos de respuesta ante casos de violencia basada en género.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2228,14 +2244,22 @@ MAPE: inf%
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conversiones"><strong>Conversiones</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#seleccion-de-variables">Selección de variables</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelaje">Modelaje</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lineal-regression">Lineal Regression</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ridge">Ridge</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lineal-regression"><strong>Lineal Regression</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ridge"><strong>Ridge</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ridge-saga-solver">Ridge (Saga solver)</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lasso"><strong>LASSO</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#knn"><strong>KNN</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#xgboost">Xgboost</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#knn"><strong>KNN</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#knn-ball-trees">KNN Ball Trees</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#random-forest"><strong>Random Forest</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#xgboost"><strong>Xgboost</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#xgboost-optimizado">Xgboost (Optimizado)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#svr"><strong>SVR</strong></a></li>
 </ul>
 </li>
 </ul>
