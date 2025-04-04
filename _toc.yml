@@ -3,9 +3,9 @@
 format: jb-book
 root: notebooks/intro.ipynb
 chapters:
-  - file: notebooks/EDA
+  - file: notebooks/EDA.ipynb
     title: Exploración de Datos (EDA)
 
-  - file: notebooks/modelos
+  - file: notebooks/modelos.ipynb
     title: Modelos de Regresión
 

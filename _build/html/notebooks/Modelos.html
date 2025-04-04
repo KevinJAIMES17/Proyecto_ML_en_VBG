@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>&lt;no title&gt; &#8212; Predecir para proteger: Un enfoque de Machine Learning en casos de Violencia Basada en Género en Colombia (2018–2023)</title>
+    <title>Imports - data &#8212; My sample book</title>
   
   
   
@@ -154,8 +154,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="Predecir para proteger: Un enfoque de Machine Learning en casos de Violencia Basada en Género en Colombia (2018–2023) - Home"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Predecir para proteger: Un enfoque de Machine Learning en casos de Violencia Basada en Género en Colombia (2018–2023) - Home"/>`);</script>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
   
   
 </a></div>
@@ -180,8 +180,12 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="EDA.html">Exploración de Datos (EDA)</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Imports - data</a></li>
+
+
+
 </ul>
 
     </div>
@@ -223,6 +227,53 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/KevinJAIMES17/Proyecto_ML_en_VBG" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/KevinJAIMES17/Proyecto_ML_en_VBG/issues/new?title=Issue%20on%20page%20%2Fnotebooks/modelos.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
 
 
 
@@ -320,7 +371,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>Imports - data</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -329,7 +380,21 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Imports - data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#conversiones"><strong>Conversiones</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#seleccion-de-variables">Selección de variables</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#modelaje">Modelaje</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lineal-regression">Lineal Regression</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ridge">Ridge</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ridge-saga-solver">Ridge (Saga solver)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lasso"><strong>LASSO</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#knn"><strong>KNN</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#xgboost">Xgboost</a></li>
+</ul>
+</li>
 </ul>
 
             </nav>
@@ -342,7 +407,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p>###Imports - data</p>
+  <section id="imports-data">
+<h1>Imports - data<a class="headerlink" href="#imports-data" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
@@ -684,7 +750,9 @@ document.write(`
   </div>
 </div></div>
 </div>
-<p>###<strong>Conversiones</strong></p>
+</section>
+<section id="conversiones">
+<h1><strong>Conversiones</strong><a class="headerlink" href="#conversiones" title="Link to this heading">#</a></h1>
 <p>Nos aseguramos del formato de las variables temporales (fechas) y sacamos información relevante sobre ellas, como lo es el día del año que representan.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -806,27 +874,6 @@ max         1.000000
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>geopy
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting geopy
-  Downloading geopy-2.4.1-py3-none-any.whl.metadata (6.8 kB)
-Collecting geographiclib&lt;3,&gt;=1.52 (from geopy)
-  Downloading geographiclib-2.0-py3-none-any.whl.metadata (1.4 kB)
-Downloading geopy-2.4.1-py3-none-any.whl (125 kB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">125.4/125.4 kB</span> <span class=" -Color -Color-Red">3.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hDownloading geographiclib-2.0-py3-none-any.whl (40 kB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">40.3/40.3 kB</span> <span class=" -Color -Color-Red">2.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hInstalling collected packages: geographiclib, geopy
-Successfully installed geographiclib-2.0 geopy-2.4.1
-</pre></div>
-</div>
-</div>
-</div>
 <p>Para aprovehar al máximo nuestras variables de locación, hemos tenido en cuenta las distancias entre municipios de ocurrencia, residencia y notificación. Para poder llegar a estos acercamientos, nos valemos de geodesic, usándola en la función calcular_distancia, en donde después de unir las bases de datos mediante las variables de COD_MUN_ y asignadas las coordenadas de cada municipio, utilizaba geodesic para calcular esta distancia en kilometros.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -889,7 +936,9 @@ Successfully installed geographiclib-2.0 geopy-2.4.1
 </div>
 </div>
 </div>
-<p>###Selección de variables</p>
+</section>
+<section id="seleccion-de-variables">
+<h1>Selección de variables<a class="headerlink" href="#seleccion-de-variables" title="Link to this heading">#</a></h1>
 <p>En este espacio ya definimos nuestras variables númericas y categóricas que serán utilizadas en nuestros conjuntos de entrenamiento y de prueba para nuestos modelos.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -938,8 +987,11 @@ import pandas as pd: Importa la librería pandas, ampliamente utilizada para la 
 test_size=0.2 indica que el 20% de los datos se utilizarán para las pruebas y el 80% restante para el entrenamiento.
 random_state=42 asegura que la división es reproducible, lo que significa que obtendrá la misma división cada vez que ejecute el código con esta semilla. Esto es útil para obtener resultados y comparaciones consistentes.</p></li>
 </ul>
-<p>##Modelaje</p>
-<p>###Lineal Regression</p>
+</section>
+<section id="modelaje">
+<h1>Modelaje<a class="headerlink" href="#modelaje" title="Link to this heading">#</a></h1>
+<section id="lineal-regression">
+<h2>Lineal Regression<a class="headerlink" href="#lineal-regression" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="kn">import</span> <span class="n">stats</span>
@@ -1075,36 +1127,9 @@ Los residuos no siguen una distribución normal (rechazar H0).
 </div>
 </div>
 <p>Los resultados del modelo de regresión lineal para la predicción de “Diferenciadias” muestran un desempeño limitado en la tarea. El histograma de residuos sugiere que la mayoría de los errores están cerca de cero, pero con la presencia de valores atípicos que pueden estar afectando la precisión del modelo. La prueba de Ljung-Box indica que no hay una autocorrelación significativa en los residuos, lo cual es deseable, pero el test de Jarque-Bera rechaza la hipótesis de normalidad de los errores, sugiriendo que el modelo podría no estar capturando adecuadamente la estructura de la variable objetivo. En términos de desempeño, el coeficiente de determinación R² es de apenas 0.056, lo que indica que la regresión lineal explica muy poca variabilidad en los tiempos de consulta de las víctimas. Además, el scatter plot de valores reales vs. predichos evidencia que el modelo tiene problemas de ajuste, con predicciones negativas en algunos casos y una dispersión elevada, lo que sugiere que no logra capturar correctamente los patrones de la variable dependiente. Finalmente, las métricas de error (MAE: 23.30 y RMSE: 169.85) muestran que el modelo tiene una precisión moderada, pero podría beneficiarse de mejoras en la selección de variables o en la elección de una metodología más robusta para datos con alta variabilidad.</p>
-<p>###Ridge</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>statsmodels
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting statsmodels
-  Downloading statsmodels-0.14.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.2 kB)
-Requirement already satisfied: numpy&lt;3,&gt;=1.22.3 in /usr/local/lib/python3.11/dist-packages (from statsmodels) (2.0.2)
-Requirement already satisfied: scipy!=1.9.2,&gt;=1.8 in /usr/local/lib/python3.11/dist-packages (from statsmodels) (1.14.1)
-Requirement already satisfied: pandas!=2.1.0,&gt;=1.4 in /usr/local/lib/python3.11/dist-packages (from statsmodels) (2.2.2)
-Collecting patsy&gt;=0.5.6 (from statsmodels)
-  Downloading patsy-1.0.1-py2.py3-none-any.whl.metadata (3.3 kB)
-Requirement already satisfied: packaging&gt;=21.3 in /usr/local/lib/python3.11/dist-packages (from statsmodels) (24.2)
-Requirement already satisfied: python-dateutil&gt;=2.8.2 in /usr/local/lib/python3.11/dist-packages (from pandas!=2.1.0,&gt;=1.4-&gt;statsmodels) (2.9.0.post0)
-Requirement already satisfied: pytz&gt;=2020.1 in /usr/local/lib/python3.11/dist-packages (from pandas!=2.1.0,&gt;=1.4-&gt;statsmodels) (2025.2)
-Requirement already satisfied: tzdata&gt;=2022.7 in /usr/local/lib/python3.11/dist-packages (from pandas!=2.1.0,&gt;=1.4-&gt;statsmodels) (2025.2)
-Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.11/dist-packages (from python-dateutil&gt;=2.8.2-&gt;pandas!=2.1.0,&gt;=1.4-&gt;statsmodels) (1.17.0)
-Downloading statsmodels-0.14.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (10.8 MB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">10.8/10.8 MB</span> <span class=" -Color -Color-Red">95.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hDownloading patsy-1.0.1-py2.py3-none-any.whl (232 kB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">232.9/232.9 kB</span> <span class=" -Color -Color-Red">16.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hInstalling collected packages: patsy, statsmodels
-Successfully installed patsy-1.0.1 statsmodels-0.14.4
-</pre></div>
-</div>
-</div>
-</div>
+</section>
+<section id="ridge">
+<h2>Ridge<a class="headerlink" href="#ridge" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.linear_model</span><span class="w"> </span><span class="kn">import</span> <span class="n">Ridge</span>
@@ -1213,7 +1238,8 @@ R²: 0.056175165226262425
 </div>
 </div>
 <p>Los resultados del modelo Ridge Regression muestran un rendimiento limitado en la predicción de la variable “Diferenciadias” dentro del conjunto de datos de violencia basada en género. El histograma de residuos revela una distribución altamente concentrada cerca de cero, pero con valores atípicos dispersos, lo que indica que el modelo tiene dificultades para ajustar correctamente la variabilidad de los datos. La prueba de Ljung-Box sugiere que los residuos no presentan autocorrelación significativa, lo que es favorable en términos de independencia temporal. Sin embargo, la métrica <span class="math notranslate nohighlight">\(R2=0.056R^2 = 0.056\)</span> indica que el modelo solo explica aproximadamente el <span class="math notranslate nohighlight">\(5.6\%\)</span> de la varianza de los datos, lo que es muy bajo. Además, el error cuadrático medio (RMSE) de 169.86 y el error absoluto medio (MAE) de 23.12 reflejan que las predicciones están lejos de ser precisas. En conjunto, estos resultados sugieren que Ridge Regression no captura adecuadamente las relaciones subyacentes en los datos, lo que podría deberse a una estructura de datos compleja o a la falta de características predictivas relevantes.</p>
-<p>####Ridge (Saga solver)</p>
+<section id="ridge-saga-solver">
+<h3>Ridge (Saga solver)<a class="headerlink" href="#ridge-saga-solver" title="Link to this heading">#</a></h3>
 <p>Para el ridge con solver saga se utilizan los “mejores” hiperparámetros en la celda de código anterior y se hace lo mismo. En cuanto a los tiempos, se muestra una mayor ventana de tiempo en el entrenamiento del modelo de machine learning, sin embargo, se muestra una ligera disminución en los tiempos de entrenamiento para el modelo Ridge con solver saga.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1305,7 +1331,10 @@ R²: 0.05016380454931002
 </div>
 </div>
 </div>
-<p>###<strong>LASSO</strong></p>
+</section>
+</section>
+<section id="lasso">
+<h2><strong>LASSO</strong><a class="headerlink" href="#lasso" title="Link to this heading">#</a></h2>
 <p>Volvemos a usar el mismo preprocessor de Ridge en Lasso, al igual que los hiper parametros del param_grid para su comparación en los modelos.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1407,7 +1436,9 @@ R²: 0.056075457160737585
 </div>
 </div>
 <p>El modelo de Lasso Regression aplicado a la predicción de “Diferenciadias” en casos de violencia basada en género muestra un rendimiento limitado, con un coeficiente de determinación ( R^2 ) de 0.056, lo que indica que solo una pequeña parte de la variabilidad de la variable objetivo se explica por el modelo. El error cuadrático medio (RMSE) de 169.87 sugiere una desviación considerable entre las predicciones y los valores reales. El gráfico de dispersión revela que las predicciones del modelo tienden a estar lejos de la línea ideal ( y = x ), indicando una subestimación sistemática para valores altos de “Diferenciadias”. El histograma de residuos muestra una distribución altamente sesgada, con la mayoría de los errores cercanos a cero pero algunos valores extremos, lo que puede reflejar problemas de ajuste. Además, la prueba de Ljung-Box y la autocorrelación de residuos no sugieren una dependencia temporal significativa en los errores, lo que implica que el modelo no capta correctamente posibles patrones temporales en los datos.</p>
-<p>###<strong>KNN</strong></p>
+</section>
+<section id="knn">
+<h2><strong>KNN</strong><a class="headerlink" href="#knn" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.neighbors</span><span class="w"> </span><span class="kn">import</span> <span class="n">KNeighborsRegressor</span>
@@ -1732,30 +1763,9 @@ Los residuos no siguen una distribución normal (rechazar H0).
 </div>
 </div>
 <p>Los resultados del modelo Random Forest muestran limitaciones significativas en su desempeño para predecir la variable “Diferenciadias” en casos de violencia basada en género. El histograma de residuos indica una alta concentración de errores cerca de cero, pero con valores extremos dispersos, lo que sugiere problemas en la capacidad del modelo para generalizar correctamente. La autocorrelación de los residuos muestra independencia temporal, lo cual es positivo, pero la prueba de Jarque-Bera revela que los residuos no siguen una distribución normal, lo que puede afectar la robustez del modelo. El scatter plot de valores reales versus predichos evidencia una fuerte acumulación de predicciones en valores bajos y una dispersión amplia, lo que indica que el modelo no captura bien la variabilidad de la variable objetivo. Además, las métricas de desempeño refuerzan estas observaciones: el R² de 0.108 sugiere que el modelo apenas explica el 10.8% de la varianza de los datos, mientras que el RMSE de 165.13 indica errores elevados en la predicción. Estos resultados, junto con el MAE de 22.05, reflejan un desempeño pobre del modelo en la tarea de regresión.</p>
-<p>###Xgboost</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>xgboost
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting xgboost
-  Downloading xgboost-3.0.0-py3-none-manylinux_2_28_x86_64.whl.metadata (2.1 kB)
-Requirement already satisfied: numpy in /usr/local/lib/python3.11/dist-packages (from xgboost) (2.0.2)
-Collecting nvidia-nccl-cu12 (from xgboost)
-  Downloading nvidia_nccl_cu12-2.26.2-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.0 kB)
-Requirement already satisfied: scipy in /usr/local/lib/python3.11/dist-packages (from xgboost) (1.14.1)
-Downloading xgboost-3.0.0-py3-none-manylinux_2_28_x86_64.whl (253.9 MB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">253.9/253.9 MB</span> <span class=" -Color -Color-Red">4.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hDownloading nvidia_nccl_cu12-2.26.2-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (201.3 MB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">201.3/201.3 MB</span> <span class=" -Color -Color-Red">5.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hInstalling collected packages: nvidia-nccl-cu12, xgboost
-Successfully installed nvidia-nccl-cu12-2.26.2 xgboost-3.0.0
-</pre></div>
-</div>
-</div>
-</div>
+</section>
+<section id="xgboost">
+<h2>Xgboost<a class="headerlink" href="#xgboost" title="Link to this heading">#</a></h2>
 <p>XGBoost (Extreme Gradient Boosting) es un algoritmo de aprendizaje automático basado en árboles de decisión que utiliza un enfoque de boosting para mejorar el rendimiento predictivo. Se destaca por su eficiencia computacional y capacidad para manejar datos con valores atípicos y relaciones no lineales. El código implementa un pipeline que incluye un preprocesador de variables categóricas mediante OneHotEncoder y un modelo XGBoost. Luego, se usa GridSearchCV con validación cruzada K-Fold para encontrar los mejores hiperparámetros, optimizando la profundidad del árbol (max_depth), la tasa de aprendizaje (learning_rate) y el número de árboles (n_estimators). Finalmente, el modelo seleccionado se entrena con los mejores parámetros y se evalúa mediante métricas como MAE, RMSE y R².</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2160,6 +2170,8 @@ MAPE: inf%
 </div>
 </div>
 </div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -2215,7 +2227,21 @@ MAPE: inf%
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Imports - data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#conversiones"><strong>Conversiones</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#seleccion-de-variables">Selección de variables</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#modelaje">Modelaje</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lineal-regression">Lineal Regression</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ridge">Ridge</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ridge-saga-solver">Ridge (Saga solver)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lasso"><strong>LASSO</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#knn"><strong>KNN</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#xgboost">Xgboost</a></li>
+</ul>
+</li>
 </ul>
 
   </nav></div>
